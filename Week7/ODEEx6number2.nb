@@ -1,0 +1,176 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5428,        166]
+NotebookOptionsPosition[      4972,        146]
+NotebookOutlinePosition[      5307,        161]
+CellTagsIndexPosition[      5264,        158]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", "2.", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Terminal", " ", "velocity", " ", "for", " ", "a", " ", "projectile", " ", 
+    "subject", " ", "to", " ", "quadratic", " ", "drag", " ", "is", " ", 
+    "given", " ", "by"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"vter", " ", "=", "  ", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", " ", "m", " ", "g"}], ")"}], "/", " ", 
+     RowBox[{"(", 
+      RowBox[{"C", " ", "p_air", " ", "A"}], ")"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.578402252790588*^9, 3.578402379913941*^9}, {
+  3.5784027274043703`*^9, 3.578402733965723*^9}, {3.578402778775676*^9, 
+  3.5784028171137123`*^9}, {3.5784031097904463`*^9, 3.578403154895156*^9}, {
+  3.5784033545782967`*^9, 3.5784034340884857`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SqrtBox["2"], " ", 
+  SqrtBox[
+   FractionBox[
+    RowBox[{"g", " ", "m"}], 
+    RowBox[{"A", " ", "C", " ", "p_air"}]]]}]], "Output",
+ CellChangeTimes->{
+  3.5784028328576937`*^9, {3.578403337474621*^9, 3.578403401711564*^9}, 
+   3.5784034384097147`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"C1", "=", "0.5"}], ";", 
+   RowBox[{"pair", "=", "1.29"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"kg", "/", 
+    RowBox[{"m", "^", "3"}]}], "*)"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{
+  3.5784033486536617`*^9, {3.578403444545622*^9, 3.5784034637095613`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "cannonball", "*)"}], " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"m", " ", "=", " ", "6"}], " ", 
+    RowBox[{"(*", "kg", "*)"}], ";", " ", 
+    RowBox[{"A", " ", "=", " ", 
+     RowBox[{"9.9", " ", "x", " ", 
+      RowBox[{"10", "^", 
+       RowBox[{"(", 
+        RowBox[{"-", "3"}], ")"}]}]}]}], " ", 
+    RowBox[{"(*", 
+     RowBox[{"m", "^", "2"}], "*)"}], ";", " ", 
+    RowBox[{"vter", " ", "=", " ", "135"}], " ", 
+    RowBox[{"(*", 
+     RowBox[{"m", "/", "s"}], "*)"}], ";", " ", 
+    RowBox[{
+     RowBox[{"y_", "0"}], "=", " ", "1"}]}], " ", 
+   RowBox[{"(*", "m", "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Human", " ", "Cannonbal"}], " ", "*)"}], " ", 
+   RowBox[{
+    RowBox[{"m", " ", "=", " ", "75"}], " ", 
+    RowBox[{"(*", "kg", "*)"}], ";", " ", 
+    RowBox[{"A", "=", " ", "0.70"}], " ", 
+    RowBox[{"(*", 
+     RowBox[{"m", "^", "2"}], "*)"}], ";", " ", 
+    RowBox[{"vter", " ", "=", " ", "60"}], " ", 
+    RowBox[{"(*", 
+     RowBox[{"m", "/", "s"}], "*)"}], ";", " ", 
+    RowBox[{
+     RowBox[{"y_", "0"}], "=", "2"}]}], " ", 
+   RowBox[{"(*", "m", "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", "Golfball", " ", "*)"}], " ", 
+   RowBox[{
+    RowBox[{"m", " ", "=", " ", "0.046"}], " ", 
+    RowBox[{"(*", "kg", "*)"}], ";", " ", 
+    RowBox[{"A", " ", "=", " ", 
+     RowBox[{"1.4", " ", "x", " ", 
+      RowBox[{"10", "^", 
+       RowBox[{"(", 
+        RowBox[{"-", "5"}], ")"}]}]}]}], " ", 
+    RowBox[{"(*", 
+     RowBox[{"m", "^", "2"}], "*)"}], ";", " ", 
+    RowBox[{"vter", "=", " ", "44"}], " ", 
+    RowBox[{"(*", 
+     RowBox[{"m", "/", "s"}], "*)"}], ";", " ", 
+    RowBox[{
+     RowBox[{"y_", "0"}], " ", "=", " ", "0", " ", 
+     RowBox[{"(*", "m", "*)"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.5784035012216053`*^9, 3.578403643686491*^9}, {
+  3.578403737196211*^9, 3.578404250285975*^9}, {3.578404412515139*^9, 
+  3.5784044210078707`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "Baseball", "*)"}], " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"m", " ", "=", " ", "0.145"}], " ", 
+    RowBox[{"(*", "kg", "*)"}], ";", " ", 
+    RowBox[{"A", " ", "=", " ", 
+     RowBox[{"4.2", " ", "x", " ", 
+      RowBox[{"10", " ", "^", 
+       RowBox[{"-", "3"}]}]}]}], " ", 
+    RowBox[{"(*", 
+     RowBox[{"m", "^", "2"}], "*)"}], ";", " ", 
+    RowBox[{"vter", " ", "=", " ", "43"}]}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"m", "/", "s"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{";", " ", 
+    RowBox[{"y0", " ", "=", " ", "1.5"}]}], " ", 
+   RowBox[{"(*", "m", "*)"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.578404268920205*^9, 3.578404270168108*^9}, {
+  3.578404448006742*^9, 3.5784044719714613`*^9}, {3.578404528033091*^9, 
+  3.578404720305386*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.578403078789447*^9, 3.578403105678034*^9}}]
+},
+WindowSize->{740, 633},
+WindowMargins->{{7, Automatic}, {Automatic, 32}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (October 10, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 846, 18, 88, "Input"],
+Cell[1428, 42, 281, 9, 58, "Output"]
+}, Open  ]],
+Cell[1724, 54, 322, 9, 50, "Input"],
+Cell[2049, 65, 1999, 53, 183, "Input"],
+Cell[4051, 120, 822, 21, 69, "Input"],
+Cell[4876, 143, 92, 1, 30, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
