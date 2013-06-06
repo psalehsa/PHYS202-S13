@@ -16,5 +16,20 @@ def LinearLeastSquaresFit(x,y):
 def WeightedLinearLeastSquaresFit(x,y,w):
 	"""Take in arrays representing (x,y) values for a set of linearly varying data and an array of weights w. Perform a weighted linear least squares regression. Return the resulting slope and intercept parameters of the best fit line with their uncertainties.
 	If the weights are all equal to one, the uncertainties on the parameters are calculated using the non-weight least squares equations."""
-	#code here...tba
-	return slope, slerr, intercept,interr
+	import math
+	import numpy as np
+	for i in range(len(x)-1): 
+           sw = sum(w)
+           wx = sum(w*x)
+           wy = sum(w*y)
+           wx2 = sum(w*(x**2))
+           wxy = sum(w*x*y)
+
+           if w[i] == 1:
+              m,b, slerr, interr = LinearLeastSquaresFit(x,y)
+           else:
+              m = (sw*wxy - wx*wy)/(sw*wx2 - wx*wx)
+              b = (wx2*wy - wx*wxy)/(sw*wx2 - wx**2)
+              slerr = ( sw/(sw*wx2-wx**2) )**(0.5)
+              interr = ( wx2/(sw*wx2-wx**2) )**(0.5)
+        return m, b, slerr, interr
